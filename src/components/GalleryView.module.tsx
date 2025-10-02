@@ -15,6 +15,7 @@ export default function GalleryView() {
   const navigate = useNavigate();
   const { state, dispatch } = usePokemonContext();
 
+  const [gallerySelectedTypes, setGallerySelectedTypes] = useState<string[]>([]);
 
   const [list, setList] = useState<ListItem[]>([]);
   const [detailsById, setDetailsById] = useState<Record<number, Pokemon>>({});
@@ -51,7 +52,7 @@ export default function GalleryView() {
 
 
   const filteredIds = useMemo(() => {
-    const selected = state.selectedTypes;
+    const selected = gallerySelectedTypes;
     let ids = list;
     if (selected.length > 0) {
       ids = list.filter(li => {
@@ -63,7 +64,7 @@ export default function GalleryView() {
       });
     }
     return ids.map(it => it.id);
-  }, [list, state.selectedTypes, detailsById]);
+  }, [list, gallerySelectedTypes, detailsById]);
 
 
   useEffect(() => {
@@ -133,8 +134,14 @@ export default function GalleryView() {
         {typesLoaded && (
           <TypeFilter
             types={state.types}
-            selectedTypes={state.selectedTypes}
-            onTypeToggle={(t) => dispatch({ type: 'TOGGLE_TYPE', payload: t })}
+            selectedTypes={gallerySelectedTypes}
+            onTypeToggle={(typeName) => {
+              setGallerySelectedTypes(prev => 
+                prev.includes(typeName) 
+                  ? prev.filter(t => t !== typeName)
+                  : [...prev, typeName]
+              );
+            }}
           />
         )}
       </div>
