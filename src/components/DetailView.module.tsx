@@ -92,7 +92,7 @@ const DetailView: React.FC = () => {
           <div className={`${styles.info} ${styles.errorInfo}`}>
             <p className={styles.sectionTitle}>{error}</p>
             <button onClick={() => navigate('/')} className={styles.chip}>
-              Back to Home
+              Back to List View
             </button>
           </div>
         </div>
@@ -108,7 +108,7 @@ const DetailView: React.FC = () => {
 
         <div className={styles.art}>
           <button onClick={() => navigate('/')} className={styles.backButton}>
-          {'< Back'}
+          {'< Back to List View'}
           </button>
           <img className={styles.pokemonImage} src={imgUrl} alt={pokemon.name} />
         </div>

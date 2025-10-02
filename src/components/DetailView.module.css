@@ -33,7 +33,7 @@
   transition: all 0.2s ease;
   z-index: 10;
   box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
-  width: 80px;
+  width: 160px;
   height: 44px;
   display: flex;
   align-items: center;
