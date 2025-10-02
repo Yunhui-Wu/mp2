@@ -59,4 +59,16 @@
       font-size: 0.9rem;
     }
   }
+
+  @media (max-width: 480px) {
+    .navigationButtons {
+      bottom: 1rem;
+      gap: 0.5rem;
+    }
+    
+    .navButton {
+      padding: 10px 20px;
+      font-size: 0.6rem;
+    }
+  }
   
