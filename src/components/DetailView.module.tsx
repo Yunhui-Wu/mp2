@@ -179,8 +179,8 @@ const DetailView: React.FC = () => {
                 <span className={styles.statLabel}>{s.label}</span>
                 <div className={styles.statBar}>
                   <div 
-                    className={styles.statFill} 
-                    style={{ '--stat-width': `${s.pct}%` } as React.CSSProperties}
+                    className={styles.statFill}
+                    style={{'--stat-width': `${s.pct}%`} as React.CSSProperties}
                   />
                 </div>
                 <span className={styles.statVal}>{s.value}</span>
