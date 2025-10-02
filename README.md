@@ -140,5 +140,3 @@ git push origin main
 - If you were unable to deploy your website, you can demo your mp locally for some point deduction (hard capped at 80%)
   - Just make sure you do `git status` and `git log` first so we can see your last edits.
 9. Fill out and submit the form [here](https://forms.gle/E7qr5MbSnxFCLpaV7).
-
-

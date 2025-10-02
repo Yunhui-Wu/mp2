@@ -1,0 +1,98 @@
+.galleryItem {
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,.1);
+  transition: transform .3s ease, box-shadow .3s ease;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.galleryItem:hover { transform: translateY(-4px); box-shadow: 0 8px 15px rgba(0,0,0,.18); }
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-color: #f7f5eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.poster {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  transition: transform .3s ease;
+}
+.galleryItem:hover .poster { transform: scale(1.03); }
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.types {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.typeTag {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: .8rem;
+  color: #fff;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 0 50%, rgba(0,0,0,.7) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease;
+}
+.galleryItem:hover .overlay { opacity: 1; pointer-events: auto; }
+
+
+.normal { background-color: #A8A878; }
+.fire { background-color: #F08030; }
+.water { background-color: #6890F0; }
+.electric { background-color: #F8D030; }
+.grass { background-color: #78C850; }
+.ice { background-color: #98D8D8; }
+.fighting { background-color: #C03028; }
+.poison { background-color: #A040A0; }
+.ground { background-color: #E0C068; }
+.flying { background-color: #A890F0; }
+.psychic { background-color: #F85888; }
+.bug { background-color: #A8B820; }
+.rock { background-color: #B8A038; }
+.ghost { background-color: #705898; }
+.dragon { background-color: #7038F8; }
+.dark { background-color: #705848; }
+.steel { background-color: #B8B8D0; }
+.fairy { background-color: #EE99AC; }
+
+@media (max-width: 768px) {
+  .galleryItem { grid-template-rows: 180px auto; }
+  .title { font-size: 1rem; }
+}

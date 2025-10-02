@@ -1,0 +1,76 @@
+.typeFilter {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .header h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 800;
+  }
+  
+  .clearButton {
+    background: #4a818d;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .clearButton:hover {
+    background: #71cac8;
+  }
+  
+  .typeList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+  }
+  
+  .typeItem {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .typeItem:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .checkbox {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    accent-color: #667eea;
+  }
+  
+  .typeName {
+    font-size: 0.9rem;
+    color: #333;
+    text-transform: capitalize;
+    font-weight: 500;
+  }
+  
+  .typeItem:has(.checkbox:checked) .typeName {
+    color: #667eea;
+    font-weight: 600;
+  }
+  
