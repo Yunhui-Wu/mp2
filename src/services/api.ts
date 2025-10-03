@@ -41,7 +41,7 @@ export const pokemonAPI = {
   },
 };
 
-// Mock Pokemon data for fallback (simplified)
+// Mock Pokemon data for fallback
 export const mockPokemonData: Pokemon[] = [
   {
     id: 1,
