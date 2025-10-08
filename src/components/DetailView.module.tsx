@@ -136,12 +136,12 @@ const DetailView: React.FC = () => {
 
           
           <div className={styles.types}>
-            {pokemon.types.map((t) => (
+            {pokemon.types?.map((t) => (
               <span
-                key={t.type.name}
-                className={`${styles.type} ${styles[t.type.name] || ''}`}
+                key={t.type?.name || 'unknown'}
+                className={`${styles.type} ${styles[t.type?.name] || ''}`}
               >
-                {t.type.name}
+                {t.type?.name || 'Unknown'}
               </span>
             ))}
           </div>

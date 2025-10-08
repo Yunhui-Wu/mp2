@@ -35,11 +35,11 @@ const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon, onClick }) => {
           </div>
         </div>
         <div className={styles.types}>
-          {pokemon.types.map((type: any, index: number) => (
-            <span key={index} className={`${styles.typeTag} ${styles[type.type.name]}`}>
+          {pokemon.types?.map((type: any, index: number) => (
+            <span key={index} className={`${styles.typeTag} ${styles[type.type?.name] || ''}`}>
               {type.type?.name?.charAt(0).toUpperCase() + type.type?.name?.slice(1) || 'Unknown'}
             </span>
-          ))}
+          )) || []}
         </div>
       </div>
     </div>

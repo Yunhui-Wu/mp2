@@ -95,7 +95,7 @@ const ListView: React.FC = () => {
       const d = detailsById[id];
       if (!d) return true;
       return state.selectedTypes.every(selectedType => 
-        d.types.some((t: any) => t.type.name === selectedType)
+        d.types?.some((t: any) => t.type?.name === selectedType) || false
       );
     });
   }, [matchedIdsByName, state.selectedTypes, detailsById]);

@@ -59,7 +59,7 @@ export default function GalleryView() {
         const d = detailsById[li.id];
         if (!d) return true;
         return selected.every(selectedType => 
-          d.types.some((t: any) => t.type.name === selectedType)
+          d.types?.some((t: any) => t.type?.name === selectedType) || false
         );
       });
     }
