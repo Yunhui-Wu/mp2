@@ -19,11 +19,11 @@ const GalleryItem: React.FC<GalleryItemProps> = ({ pokemon, onClick }) => {
         />
       </div>
       <div className={styles.info}>
-        <h3 className={styles.title}>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</h3>
+        <h3 className={styles.title}>{pokemon.name?.charAt(0).toUpperCase() + pokemon.name?.slice(1) || 'Unknown'}</h3>
         <div className={styles.types}>
           {pokemon.types.map((type: any, index: number) => (
             <span key={index} className={`${styles.typeTag} ${styles[type.type.name]}`}>
-              {type.type.name.charAt(0).toUpperCase() + type.type.name.slice(1)}
+              {type.type?.name?.charAt(0).toUpperCase() + type.type?.name?.slice(1) || 'Unknown'}
             </span>
           ))}
         </div>

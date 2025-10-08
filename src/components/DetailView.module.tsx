@@ -129,7 +129,7 @@ const DetailView: React.FC = () => {
           
           <div className={styles.header}>
             <h1 className={styles.name}>
-              {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
+              {pokemon.name?.charAt(0).toUpperCase() + pokemon.name?.slice(1) || 'Unknown'}
             </h1>
             <span className={styles.id}>{prettyId}</span>
           </div>

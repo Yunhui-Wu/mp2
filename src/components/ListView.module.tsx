@@ -199,7 +199,7 @@ const ListView: React.FC = () => {
   }, [pagedIds, detailsById, list, state.sortField, state.sortOrder]);
 
   const visible = useMemo(() => {
-    return sortedIds.map((id) => detailsById[id]).filter(Boolean) as Pokemon[];
+    return sortedIds.map((id) => detailsById[id]).filter((pokemon): pokemon is Pokemon => pokemon !== undefined);
   }, [sortedIds, detailsById]);
 
   if (loadingList) {

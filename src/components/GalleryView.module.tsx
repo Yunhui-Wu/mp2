@@ -122,7 +122,7 @@ export default function GalleryView() {
 
   const visibleList: Pokemon[] = filteredIds
     .map(id => detailsById[id])
-    .filter(Boolean) as Pokemon[];
+    .filter((pokemon): pokemon is Pokemon => pokemon !== undefined);
 
   const nothingYet = !loadingList && visibleList.length === 0 && list.length > 0 && Object.keys(detailsById).length > 0;
 

@@ -33,7 +33,7 @@ const TypeFilter: React.FC<TypeFilterProps> = ({ types, selectedTypes, onTypeTog
               className={styles.checkbox}
             />
             <span className={styles.typeName}>
-              {type.name.charAt(0).toUpperCase() + type.name.slice(1)}
+              {type.name?.charAt(0).toUpperCase() + type.name?.slice(1) || 'Unknown'}
             </span>
           </label>
         ))}
