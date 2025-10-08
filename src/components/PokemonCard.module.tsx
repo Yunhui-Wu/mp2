@@ -12,7 +12,7 @@ const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon, onClick }) => {
     <div className={styles.pokemonCard} onClick={onClick}>
       <div className={styles.imageContainer}>
         <img
-          src={pokemon.sprites.other['official-artwork'].front_default || pokemon.sprites.front_default || '/placeholder-poster.png'}
+          src={pokemon.sprites?.other?.['official-artwork']?.front_default || pokemon.sprites?.front_default || '/logo192.png'}
           alt={pokemon.name}
           className={styles.pokemonImage}
           loading='lazy'
